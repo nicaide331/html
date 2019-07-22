@@ -1,0 +1,143 @@
+.div{
+    width: 500px;
+    /* align-content: center; */
+    background: red;
+    height: auto;
+    left: 35%;
+    position: absolute;
+}
+
+/*头部*/
+.head_div{
+    width: 500px;
+    border: red;
+    /* align-content: center; */
+    background: red;
+    height: auto;
+    position: absolute;
+}
+.city{
+    border: red;
+    float: left;
+}
+
+.search{
+    float: left;
+}
+
+.image{
+    max-width: 500px;
+
+}
+
+/*图片*/
+#image{
+    width: 100%;
+
+}
+
+/*头条*/
+.message{
+    height: 30px;
+    background: aquamarine;
+}
+
+.message_p{
+    width: 350px;
+    background: mediumpurple;
+    height: 40px;
+    float: left;
+}
+
+.message_href{
+    width: 150px;
+    height: 40px;
+    background: chartreuse;
+    float: left;
+}
+
+.message_href a{
+    align-content: center;
+}
+
+
+/*建筑诊所*/
+.construction_clinic{
+
+    height: 220px;
+}
+
+
+
+.question{
+    width: 50%;
+    height: 150px;
+    background: yellow;
+    float: left;
+}
+
+.answer{
+    width: 50%;
+    height: 150px;
+    background: lawngreen;
+    float: left;
+
+}
+
+/*建筑查询*/
+.building_query{
+
+}
+
+.building_query_unit{
+
+    height: 80px;
+    width: 23%;
+    background: dodgerblue;
+    padding-right: 10px;
+    float: left;
+    padding-top: 12px;
+    margin-bottom: 10px;
+    position:relative;
+}
+
+.building_query_unit img{
+
+    height: 40px;
+    width: 50px;
+    padding: 0px 33px;
+}
+
+.building_query_unit p{
+
+    height: 20px;
+    left: 20px;
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline: 0px;
+    padding: 5px 39px;
+
+}
+
+/*行业服务*/
+.industry_service{
+
+    width: 500px;
+    background: lightpink;
+}
+
+.industry_service_util{
+
+    height: 40px;
+    width: 50%;
+    float: left;
+}
+
+.industry_service_util img{
+    height: auto;
+    width: auto;
+    padding: 8px 10px;
+}
+
+
+

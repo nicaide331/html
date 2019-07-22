@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式提交数据</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+</head>
+<body>
+<form class="myform" name="product">
+    名称：<input type="text" id="name" value="产品"/><br/>
+    <input type="button" value="提交" id="sender" onclick="submit()">
+</form>
+<div id="messageDiv"></div>
+
+<script>
+    function submit() {
+        $.ajax({
+            type: "post",
+            url: "http://localhost:8080/add",
+            data: $('.myform').serialize(),
+            dataType: "json",
+            contentType: "application/json;charset=UTF-8",
+            success: function (result) {
+                if (result.resultCode == 200) {
+                    alert("SUCCESS");
+                }
+            },
+            error: function (data) {
+                alert("ERROR");
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

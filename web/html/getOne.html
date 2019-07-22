@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式提交数据</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+</head>
+<body>
+
+<button class="btn1">点击</button>
+<div id="messageDiv"></div>
+
+<script>
+
+    $(function () {
+        //点击按钮触发
+        $(".btn1").click(function () {
+            $.ajax({
+                type: "post",
+                dataType: "json",
+                url: "http://localhost:8080/listProduct",
+                success: function (result) {
+                    console.log(result);
+                },
+                //请求失败，包含具体的错误信息
+                error: function (e) {
+                    console.log(e.status);
+                    console.log(e.responseText);
+                }
+            })
+        })
+
+    })
+
+</script>
+</body>
+
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link type="text/css" href="../css/index.css" rel="stylesheet">
+    <script src="../js/jquery-3.4.1.js" type="text/javascript"></script>
+</head>
+<body>
+<div class="div">
+
+    <!--    城市和搜索栏-->
+    <div class='head_div'  >
+        <button class="city" >城市按钮</button>
+        <form class="search" >
+            <input  type="text" />
+        </form>
+    </div>
+
+    <!--    图片-->
+    <div class="image">
+        <img src="../image/image.jpg" id="image">
+    </div>
+
+<!--    头条-->
+    <div class="message">
+        <div class="message_p">
+            <p  style="width: 350px">共筑头条——福建省绿色混凝土建设规则明细</p>
+        </div>
+        <div class="message_href">
+            <a href="http://192.168.156.108:8083/plugins/servlet/mobile#issue/HNTZNSC-72" id="href" >更多</a>
+        </div>
+    </div>
+
+<!--    建筑诊所-->
+    <div class="construction_clinic">
+        <span >
+            <h4>建筑诊所</h4>
+        </span>
+        <div class="question">
+            <a href="javacript:void(0);"><button >提问</button></a>
+        </div>
+        <div class="answer">
+            <a href="javacript:void(0);"><button >回答</button></a>
+        </div>
+        <p>用户***********干了什么事</p>
+    </div>
+
+<!--    建材查询-->
+    <div class="building_query">
+
+        <div class="building_query_unit" style="background: azure">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+
+        <div class="building_query_unit" style="background: dimgray">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+        <div class="building_query_unit" style="background: chocolate">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+        <div class="building_query_unit" style="background: blueviolet">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+
+        <div class="building_query_unit" style="background: deeppink">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+        <div class="building_query_unit" style="background: khaki">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+        <div class="building_query_unit" style="background: tomato">
+            <a href="javacript:void(0);">
+                <img src="../image/img_1.jpg" >
+            </a>
+            <p>测试</p>
+        </div>
+
+
+    </div>
+
+<!--    行业服务-->
+    <div class="industry_service">
+        <br>
+        <span >
+            <h4>建筑诊所</h4>
+        </span>
+        <div class="industry_service_util" style="background: blueviolet">
+            <a href="javacript:void(0)">
+                <img src="../image/img_2.jpg"/>
+            </a>
+
+        </div>
+        <div class="industry_service_util" style="background: azure">
+
+        </div>
+        <div class="industry_service_util" style="background: chartreuse">
+
+        </div>
+        <div class="industry_service_util" style="background: gold">
+
+        </div>
+        <div class="industry_service_util" style="background: lightcyan">
+
+        </div>
+        <div class="industry_service_util" style="background: olive">
+
+        </div>
+
+    </div>
+
+
+</div>
+
+
+
+
+</body>
+<script>
+    function rc(){
+        return parseInt(Math.random()*256);
+    }
+    $(function(){
+        $(".building_query_unit").read(function(){
+            $(".building_query_unit").css("background-color","rgb("+rc()+","+rc()+","+rc()+")");
+        });
+    });
+</script>
+</html>

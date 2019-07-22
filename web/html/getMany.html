@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>用AJAX以JSON方式提交数据</title>
+    <script type="text/javascript" src="../js/jquery-3.4.1.js"></script>
+</head>
+<body>
+<form class="myform">
+    id：<input type="text" id="id" value="123"/><br/>
+    名称：<input type="text" id="name" value="产品"/><br/>
+    <input type="button" value="提交" id="sender" onclick="submit()">
+</form>
+<div id="messageDiv"></div>
+
+<script>
+    // $('#sender').click(function () {
+    //     var id = document.getElementById('id').value;
+    //     var name = document.getElementById('name').value;
+    //     var category = {"name": name, "id": id};
+    //     var jsonData = JSON.stringify(category);
+    //     var page = "category";
+    //
+    //     $.ajax({
+    //         type: "put",
+    //         url: page,
+    //         data: jsonData,
+    //         dataType: "json",
+    //         contentType: "application/json;charset=UTF-8",
+    //         success: function (result) {
+    //         }
+    //     });
+    //     alert("提交成功，请在springboot控制台查看服务端接收到的数据");
+    //
+    // });
+
+    function submit() {
+        $.ajax({
+            type: post,
+            dataType: "json",
+            url: "http://localhost:8000/insert",
+            data: $('.myform').serialize(),
+            success: function (result) {
+                console.log(result);
+                if (result == 200) {
+                    alert("SUCCESS");
+                }
+            },
+            err: function () {
+                alert("ERROR")
+            }
+        });
+    }
+</script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.4.1.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="div1">
+
+    <button class="b1">获得align属性</button>
+    <button class="b2">获得自定义属性</button>
+
+    <h1 align="center" game="LOL">居中标题</h1>
+
+</div>
+
+
+<script>
+    $(document).ready(function () {
+        $(".b1").click(function () {
+            alert("align的属性是：" + $("h1").attr("align"));
+
+        });
+
+        $(".b2").click(function () {
+            alert("game的属性是：" + $("h1").attr("game"));
+
+        });
+
+    });
+</script>
+</body>
+
+</html>
